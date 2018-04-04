@@ -56,35 +56,22 @@
   </header>
   <!-- END: header -->
   
-  <section class="probootstrap-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center section-heading">
-          <h2>Inicia sesión</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <form method="post" class="probootstrap-form probootstrap-form-box">
-            <div class="form-group">
-              <label for="username">Usuario</label>
-              <input type="username" name="username" id="username" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="username">Contraseña</label>
-              <input type="password" name="password" id="password" class="form-control">
-            </div>
-            <div class="form-group mb50">
-              <input type="submit" value="Inicia sesión" class="btn btn-primary btn-block">
-            </div>
-            <div class="form-group text-center">
-              <p class="form-note-link"><small><a href="signup.html">¿No tienes cuenta? Regístrate gratis</a></small> <br> <small><a href="#">¿Has olvidado tu contraseña?</a></small></p>
-            </div>
-          </form>
-        </div>
-      </div>
+	  
+<!-- LOGIN -->	  
+ <div class="LoginForm">
+  <div class="LoginForm__title">Login</div>
+  <form class="LoginForm__form">
+    <div class="Control">
+      <label class="Control__label" for="user">User</label>
+      <input class="Control__input" name="user" type="text" placeholder="User" />
     </div>
-  </section>
+    <div>
+      <label class="Control__label" for="password">Password</label>
+      <input class="Control__input" name="password" type="password" placeholder="Password" />
+    </div>
+    <input class="Control__input" type="submit" value="Let's go" />
+  </form>
+</div>
   
   
   <!-- START: footer -->
