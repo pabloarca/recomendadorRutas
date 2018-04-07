@@ -1,0 +1,7 @@
+{
+...
+  "scripts": {
+    "serve": "live-server ."
+  }
+...
+}
