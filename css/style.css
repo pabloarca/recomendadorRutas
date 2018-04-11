@@ -71,6 +71,11 @@ small, .font_small {
   font-size: 0.889em;
 }
 
+#map_canvas {
+   height: 400px;
+    width: auto;
+  }
+
 p, ul, ol {
   margin-bottom: 1.3em;
 }
