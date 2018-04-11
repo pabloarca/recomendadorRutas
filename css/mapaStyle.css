@@ -1,5 +1,6 @@
 #mapa{
 margin: 0 auto 0 auto; 
-height:80%;
+height: 90%; 
+position:fixed;
 width:80%
 }
