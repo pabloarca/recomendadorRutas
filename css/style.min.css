@@ -85,6 +85,12 @@ a:active,a:focus,a:hover{
     text-transform:uppercase;
     font-weight:500
 }
+
+#map_canvas {
+   height: 400px;
+    width: auto;
+  }
+
 .probootstrap-logo:active,.probootstrap-logo:focus,.probootstrap-logo:hover{
     color:#fff
 }
