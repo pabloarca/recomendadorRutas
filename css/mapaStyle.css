@@ -1,6 +1,8 @@
 #mapa{
 margin: 0 auto 0 auto; 
-height: 90%; 
-position:fixed;
+height:600px;
 width:80%
 }
+@media only screen and (min-device-width : 320px)  and (max-device-width : 80%){
+    #mapa {height: 250px;}
+  }
