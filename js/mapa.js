@@ -5,7 +5,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/cjaudgl840gn32rnrepcb9b9g', // stylesheet location
     center: [-4.9775, 36.6863], // starting position [lng, lat]
     maxBounds: [[-5.141308, 36.605031], [-4.817666, 36.796423]],
-    zoom: 10
+    zoom: 9
 });
 
 map.addControl(new mapboxgl.NavigationControl());
