@@ -20,4 +20,5 @@ map.on('load', function() {
     map.addSource("merge", {
         "type": "geojson",
         "data": merge
+    }
     });
