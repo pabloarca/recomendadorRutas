@@ -25,12 +25,16 @@ map.on('load', function () {
             "line-join": "round",
             "line-cap": "round"
         },
-        "paint": {
-            "line-color": "#0eb51c",
-            "line-width": 2
+        "line-color": {
+             property: 'nombre',
+             stops: [
+             ["Entrada desde Istan - Fuente de la Montecilla", '#f1f075'],
+             ["Quejigales - La Hidalga", '#e55e5e']
+         ]
         }
     });
 });
+
 
 
 document.getElementById('checkbox1').onclick = function() {
