@@ -10,12 +10,29 @@ var map = new mapboxgl.Map({
     zoom: 9
 });
 
-map.addControl(new mapboxgl.NavigationControl());
-
-
-map.on('load', function() {
-    map.addSource('merge', {
-        type: 'geojson',
-        data: 'merge.geojson'
+map.on('load', function () {
+    
+    map.addSource("merge", {
+        type: "geojson",
+        // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
+        // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
+        data: "merge.geojson"
+        
+    });
+    
+    map.addLayer({
+        id: "OBJECTID",
+        type: "line",
+        source: "merge"
+        },
+                 
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#888",
+            "line-width": 8
+        }
     });
 });
