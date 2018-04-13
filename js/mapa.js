@@ -29,5 +29,5 @@ map.on('load', function () {
             "line-color": "#888",
             "line-width": 6
         }
-    });
+    })
 });
