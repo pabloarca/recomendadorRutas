@@ -16,6 +16,6 @@ map.addControl(new mapboxgl.NavigationControl());
 map.on('load', function() {
     map.addSource('merge', {
         type: 'geojson',
-        data: 'merge.json'
+        data: 'merge.geojson'
     });
 });
