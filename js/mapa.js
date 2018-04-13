@@ -28,7 +28,7 @@ map.on('load', function () {
         "line-color": {
              property: 'nombre',
              stops: [
-             ["Entrada desde Istan - Fuente de la Montecilla", '#f1f075'],
+             ["Entrada desde Istan - Fuente de la Montecilla", '#0eb51c'],
              ["Quejigales - La Hidalga", '#e55e5e']
          ]
         }
