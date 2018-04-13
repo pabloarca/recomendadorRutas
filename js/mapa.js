@@ -18,4 +18,4 @@ map.on('load', function() {
         type: 'geojson',
         data: 'merge.json'
     });
-})
+});
