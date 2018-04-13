@@ -385,7 +385,7 @@
   </div>
   
  
-
+<!-- CON FILTROS HORAS -->
 <div class="row mb50">
         <div class="col-md-12 section-heading text-center">
           <h2>Origen y trayecto según horas</h2>
@@ -398,44 +398,74 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Longitud</th>
-        <th>Tiempo</th>
-        <th>Dificultad</th>
-        <th>Desnivel</th>
-      </tr>
+        <th>Punto</th>        
+	    <th>Categoría</th> 
+		<th>Nombre</th>
+   </tr>
     </thead>
-    <tbody id="featured_trails">
+	
+	<tbody>
+      <tr>
+        <td>
+	   
+	   Origen
+          </td>
+        <td>
+		<select>
+			  <option value="">Con parking</option>
+			  <option value="">Con parking</option>
+			  <option value="">Con parking</option>
+			  <option value="">Con parking</option>
+			</select>
+		</td>
+        
+	 <td>
+		<select>
+			  <option value="">Quejigales</option>
+			  <option value="">Quejigales</option>
+			  <option value="">Quejigales</option>
+			  <option value="">Quejigales</option>
+			</select>
+	 </td>
+	
+	
+      </tr>
+      
     </tbody>
-  </table>
-  <datalist id="start_datalist"></datalist>
-  <datalist id="end_datalist"></datalist>
-  <table>
-    <thead>
+	<tbody>
       <tr>
-        <th></th>
-        <th>Filtro</th>
+        <td>
+	   
+	   Horas
+          </td>
+        <td>
+		<input class="quantityTxt form-control" type="text" value="">
+		</td>
+        
+	 
+	
+	
       </tr>
-    </thead>
-    <tbody id="filter_recommended">
-      <tr>
-        <td>Origen</td>
-        <td><input id="start_input" type="search" autocomplete="on" list="start_datalist" inputmode="text" placeholder="Origen"></td>
-      </tr>
-      <tr>
-        <td>Destino</td>
-        <td><input id="end_input" type="search" autocomplete="on" list="end_datalist" inputmode="text" placeholder="Destino"></td>
-      </tr>
-      <tr>
-        <td>Tiempo</td>
-        <td> <input id="time_input" type="time" value=""> </td>
-      </tr>
-      <tr>
-        <td>Velocidad (km/h)</td>
-        <td> <input id="speed_input" type="number" value="4" min="1"> </td>
-      </tr>
+      
     </tbody>
-  </table>
+	
+	<tbody>
+      <tr>
+        <td>
+	   
+	   Velocidad (4 km/h por defecto)
+          </td>
+        <td>
+		<input class="quantityTxt form-control" type="text" value="4">
+		</td>
+        
+	 
+	
+	
+      </tr>
+      
+    </tbody>
+	</table>
 	<p><a href="#" class="btn btn-primary centered">Añadir ruta seleccionada al mapa</a></p>
   </div>
   </div>
@@ -490,7 +520,6 @@
       </div>
     </div>
   </footer>
-	  
   <!-- END: footer -->
 
 
