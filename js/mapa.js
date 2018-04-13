@@ -15,6 +15,8 @@ map.on('load', function () {
         "data": url
     });
 
+    
+    
     map.addLayer({
         "id": "merge",
         "type": "line",
@@ -24,8 +26,13 @@ map.on('load', function () {
             "line-cap": "round"
         },
         "paint": {
-            "line-color": "#888",
-            "line-width": 8
+            "line-color": "#0eb51c",
+            "line-width": 2
         }
     });
 });
+
+
+document.getElementById('checkbox1').onclick = function() {
+    map.showTileBoundaries = !!this.checked;
+};
