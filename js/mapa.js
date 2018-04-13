@@ -2,20 +2,16 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoicGVwaXRvLWdyaWxsbyIsImEiOiJjajhhdjFjN3MwZ2Y2MnFwaWlkNmtoY2Y0In0.HJNKwaFRS8_ikTesrLtVsg';
 
 const url = 'trails_simplified.geojson',
-center_point = [-4.9775, 36.6863],
-bounds = [[-5.141308, 36.605031], [-4.817666, 36.796423]],
-navigation = new mapboxgl.NavigationControl(),
-
 
 var map = new mapboxgl.Map({
     container: 'mapa', // container id
     style: 'mapbox://styles/mapbox/cjaudgl840gn32rnrepcb9b9g', // stylesheet location
-    center: center_point,
-    maxBounds: bounds,
+    center:  [-4.9775, 36.6863],
+    maxBounds: [[-5.141308, 36.605031], [-4.817666, 36.796423]],
     zoom: 10
 });
 
-map.addControl(navigation);
+map.addControl(new mapboxgl.NavigationControl());
 
 map.on('load', () => {
     map.fitBounds(bounds);
