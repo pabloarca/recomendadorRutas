@@ -13,7 +13,7 @@ var map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl());
 
 
-var merge = 'merge.geojson',
+var merge = 'merge.geojson';
 
 map.on('load', function() {
     // Add a GeoJSON source containing place coordinates and information.
