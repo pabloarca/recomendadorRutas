@@ -1,4 +1,6 @@
 
+
+
 mapboxgl.accessToken = 'pk.eyJ1IjoicGVwaXRvLWdyaWxsbyIsImEiOiJjajhhdjFjN3MwZ2Y2MnFwaWlkNmtoY2Y0In0.HJNKwaFRS8_ikTesrLtVsg';
 var map = new mapboxgl.Map({
     container: 'mapa', // container id
@@ -11,3 +13,11 @@ var map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl());
 
 
+var merge = 'merge.geojson',
+
+map.on('load', function() {
+    // Add a GeoJSON source containing place coordinates and information.
+    map.addSource("merge", {
+        "type": "geojson",
+        "data": merge
+    });
