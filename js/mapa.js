@@ -13,12 +13,9 @@ var map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl());
 
 
-var merge = 'merge.geojson';
-
 map.on('load', function() {
-    // Add a GeoJSON source containing place coordinates and information.
-    map.addSource("merge", {
-        "type": "geojson",
-        "data": merge
-    }
+    map.addSource('merge', {
+        type: 'geojson',
+        data: 'merge.json'
     });
+})
