@@ -183,46 +183,231 @@
   
  <div class="container">
  <div class="table-responsive">            
-  <table>
+  <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Longitud</th>
-        <th>Tiempo</th>
-        <th>Dificultad</th>
-        <th>Desnivel</th>
+        <th>Nombre</th>        
+	    <th>Longitud (m)</th>
+	    <th>Horas</th>
+		<th>Dificultad</th>
+		<th>Desnivel (m)</th>	
       </tr>
     </thead>
-    <tbody id="featured_trails">
+    
+	<tbody>
+      <tr>
+        <td>
+	   <button onclick="primera()"><img id="image" src="img/add.png" width="16" height="16"></button>	   	   
+	   Quejigales - La Hidalga
+          </td>
+        <td>
+		22128
+		</td>
+        
+	 <td>
+		6.52	
+	 </td>
+	 <td>
+		alta
+	 </td>     
+     <td>
+		790.28
+	 </td>    
+	
+      </tr>
+      
     </tbody>
-  </table>
-  <datalist id="start_datalist"></datalist>
-  <datalist id="end_datalist"></datalist>
-  <table>
-    <thead>
+	
+	<tbody>
       <tr>
-        <th></th>
-        <th>Filtro</th>
+        <td>
+	   <button onclick="myFunction()"><img id="image" src="img/add.png" width="16" height="16"></button>
+	   Entrada desde Monda-Istán - Fuente de la Montecilla
+          </td>
+        <td>
+		200007
+		</td>
+        
+	 <td>
+		6.89	
+	 </td>
+	 <td>
+		alta
+	 </td>     
+     <td>
+		1510.39
+	 </td>    
+	
       </tr>
-    </thead>
-    <tbody id="filter_recommended">
-      <tr>
-        <td>Origen</td>
-        <td><input id="start_input" type="search" autocomplete="on" list="start_datalist" inputmode="text" placeholder="Origen"></td>
-      </tr>
-      <tr>
-        <td>Destino</td>
-        <td><input id="end_input" type="search" autocomplete="on" list="end_datalist" inputmode="text" placeholder="Destino"></td>
-      </tr>
-      <tr>
-        <td>Tiempo</td>
-        <td> <input id="time_input" type="time" value=""> </td>
-      </tr>
-      <tr>
-        <td>Velocidad (km/h)</td>
-        <td> <input id="speed_input" type="number" value="4" min="1"> </td>
-      </tr>
+      
     </tbody>
+	<tbody>
+      <tr>
+        <td>
+	   <button onclick="myFunction()"><img id="image" src="img/add.png" width="16" height="16"></button>
+	   Entrada desde Monda-Istán - Aranda
+          </td>
+        <td>
+		28568
+		</td>
+        
+	 <td>
+		8.87	
+	 </td>
+	 <td>
+		alta
+	 </td>     
+     <td>
+		1382.43
+	 </td>    
+	
+      </tr>
+      
+    </tbody>
+	
+    <tbody>
+      <tr>
+        <td>
+	   <button onclick="myFunction()"><img id="image" src="img/add.png" width="16" height="16"></button>
+	   Entrada desde Monda-Istán - Gaimón
+          </td>
+        <td>
+		11137
+		</td>
+        
+	 <td>
+		8.82	
+	 </td>
+	 <td>
+		media
+	 </td>     
+     <td>
+		832.1
+	 </td>    
+	
+      </tr>
+      
+    </tbody>
+    <tbody>
+      <tr>
+        <td>
+	   <button onclick="myFunction()"><img id="image" src="img/add.png" width="16" height="16"></button>
+	   Entrada desde Istán - Gaimón
+          </td>
+        <td>
+		11616
+		</td>
+        
+	 <td>
+		3.92
+	 </td>
+	 <td>
+		media
+	 </td>     
+     <td>
+		820.45
+	 </td>    
+	
+      </tr>
+      
+    </tbody>
+	 
+    <tbody>
+      <tr>
+        <td>
+	   <button onclick="myFunction()"><img id="image" src="img/add.png" width="16" height="16"></button>
+	   Entrada desde Istán - Fuente de la Montecilla
+          </td>
+        <td>
+		14511
+		</td>
+        
+	 <td>
+		5.03	
+	 </td>
+	 <td>
+		media
+	 </td>     
+     <td>
+		1123.01
+	 </td>    
+	
+      </tr>
+      
+    </tbody>
+	 
+    <tbody>
+      <tr>
+        <td>
+	  <button onclick="myFunction()"><img id="image" src="img/add.png" width="16" height="16"></button>
+	   Centro visitantes Tolox - Aranda
+          </td>
+        <td>
+		7913
+		</td>
+        
+	 <td>
+		2.59	
+	 </td>
+	 <td>
+	       baja
+	 </td>     
+     <td>
+		491.26
+	 </td>    
+	
+      </tr>
+      
+    </tbody>
+ 
+    <tbody>
+      <tr>
+        <td>
+	   <button onclick="myFunction()"><img id="image" src="img/add.png" width="16" height="16"></button>
+	   Lifa - Torre de Lifa
+          </td>
+        <td>
+	       6706
+		</td>
+        
+	 <td>
+		1.80	
+	 </td>
+	 <td>
+		baja
+	 </td>     
+     <td>
+		96.07
+	 </td>    
+	
+      </tr>
+      
+    </tbody>	
+	  
+    <tbody>
+      <tr>
+        <td>
+	   <button onclick="myFunction()"><img id="image" src="img/add.png" width="16" height="16"></button>
+	   Puerto de las Golondrinas - Aranda
+          </td>
+        <td>
+	       6843
+		</td>
+        
+	 <td>
+		2.15	
+	 </td>
+	 <td>
+		baja
+	 </td>     
+     <td>
+		348.07
+	 </td>    
+	
+      </tr>
+      
+    </tbody>	
+ 
   </table>
 	<p><a href="#" class="btn btn-primary centered">Añadir ruta seleccionada al mapa</a></p>
   </div>
