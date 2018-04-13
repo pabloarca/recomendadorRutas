@@ -33,6 +33,6 @@ map.on('load', function () {
         "paint": {
             "line-color": "#888",
             "line-width": 8
-        }
+        })
     });
 });
