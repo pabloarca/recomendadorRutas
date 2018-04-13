@@ -1,4 +1,5 @@
 
+ const url = 'trails_simplified.geojson',
 center_point = [-4.9775, 36.6863],
 bounds = [[-5.141308, 36.605031], [-4.817666, 36.796423]],
 navigation = new mapboxgl.NavigationControl(),
