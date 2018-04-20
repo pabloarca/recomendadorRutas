@@ -58,7 +58,7 @@
 
     <!-- MAPA-->
 
-<section id="mapa"></section>
+<div id="map"></div>
 
 
 
@@ -70,80 +70,46 @@
         </div>
       </div>
 
-	   <div class="container">
- <div class="table-responsive">
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Punto</th>
-	    <th>Categoría</th>
-		<th>Nombre</th>
-   </tr>
-    </thead>
-
-
-<tbody>
-      <tr>
-        <td>
-
-	   Origen
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+	        <th>Categoría</th>
+		      <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Origen
           </td>
-        <td>
-		<select>
-			  <option value="">Con parking</option>
-			  <option value="">Con parking</option>
-			  <option value="">Con parking</option>
-			  <option value="">Con parking</option>
-			</select>
-		</td>
-
-	 <td>
-		<select>
-			  <option value="">Quejigales</option>
-			  <option value="">Quejigales</option>
-			  <option value="">Quejigales</option>
-			  <option value="">Quejigales</option>
-			</select>
-	 </td>
-
-
-      </tr>
-
-
- </tbody>
- <tbody>
-      <tr>
-        <td>
-	  Destino
+          <td>
+            <select id="path_origin__categories">
+            </select>
           </td>
-        <td>
-		<select>
-			  <option value="">Con parking</option>
-			  <option value="">Con parking</option>
-			  <option value="">Con parking</option>
-			  <option value="">Con parking</option>
-			</select>
-		</td>
-
-	 <td>
-		<select>
-			  <option value="">La Hidalga</option>
-			  <option value="">La Hidalga</option>
-			  <option value="">La Hidalga</option>
-			  <option value="">La Hidalga</option>
-			</select>
-	 </td>
-
-
-      </tr>
-
-
- </tbody>
-
-	</table>
-	<p><a href="#" class="btn btn-primary centered">Añadir ruta seleccionada al mapa</a></p>
+          <td>
+            <input type="search" list="" id="path_origin__options"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Destino
+          </td>
+          <td>
+            <select id="path_destination__categories">
+            </select>
+          </td>
+          <td>
+            <input type="search" list="" id="path_destination__options"></input>
+          </td>
+        </tr>
+      </tbody>
+	  </table>
+	  <button href="#" id='path_router' class="btn btn-primary centered">Añadir ruta seleccionada al mapa</button>
   </div>
-  </div>
+</div>
 
    <!-- FOOTER -->
   <footer role="contentinfo" class="probootstrap-footer">
@@ -195,12 +161,9 @@
 
 
 
-  <script src="assets/js/scripts.min.js"></script>
-  <script src="assets/js/main.min.js"></script>
-
-  <script type="text/javascript" charset="utf-8" src='https://d3js.org/d3.v3.min.js'></script>
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
-  <script src="js/mapa.js"></script>
+  <!-- <script src="assets/js/scripts.min.js"></script>
+  <script src="assets/js/main.min.js"></script> -->
+  <script src="assets/js/short_app.min.js"></script>
 
   </body>
 </html>
