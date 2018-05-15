@@ -1,162 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recomendador de rutas</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recomendador de rutas</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" type="image/png" href="img/logo.png" />
 
 
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles-merged.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles-merged.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
 
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
+
+<body>
 
 
 
-<!-- START: header -->
+  <!-- START: header -->
   <header role="banner" class="probootstrap-header probootstrap-header-no-intro">
     <div class="container-fluid">
       <!-- <div class="row"> -->
-        <a href="index.html" class="probootstrap-logo">Recomendador</a>
+      <a href="index.html" class="probootstrap-logo">Recomendador</a>
 
-        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
-        <div class="mobile-menu-overlay"></div>
+      <a href="#" class="probootstrap-burger-menu visible-xs">
+        <i>Menu</i>
+      </a>
+      <div class="mobile-menu-overlay"></div>
 
-       <nav role="navigation" class="probootstrap-nav hidden-xs">
-          <ul class="probootstrap-main-nav">
-            <li><a href="index.html">Principal</a></li>
+      <nav role="navigation" class="probootstrap-nav hidden-xs">
+        <ul class="probootstrap-main-nav">
+          <li>
+            <a href="index.html">Principal</a>
+          </li>
 
-            <li><a href="rutasRecomendadas.html">Rutas recomendadas</a></li>
-			<li><a href="">Utilidades</a></li>
-            <li><a href="login.html">Inicio sesión</a></li>
-            <li class="probootstrap-cta"><a href="signup.html">Registro</a></li>
+          <li>
+            <a href="rutasRecomendadas.html">Rutas recomendadas</a>
+          </li>
+          <li>
+            <a href="">Utilidades</a>
+          </li>
+          <li>
+            <a href="login.html" id="login__control">Inicio sesión</a>
+          </li>
+          <li class="probootstrap-cta">
+            <a href="signup.html">Registro</a>
+          </li>
+        </ul>
+        <div class="extra-text visible-xs">
+          <a href="#" class="probootstrap-burger-menu">
+            <i>Menu</i>
+          </a>
+          <h5>Social</h5>
+          <ul class="social-buttons">
+            <li>
+              <a href="https://twitter.com/geografiamalaga">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/geouma">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
+
           </ul>
-          <div class="extra-text visible-xs">
-            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
-            <h5>Social</h5>
-            <ul class="social-buttons">
-              <li><a href="https://twitter.com/geografiamalaga"><i class="icon-twitter"></i></a></li>
-              <li><a href="https://www.facebook.com/geouma"><i class="icon-facebook"></i></a></li>
 
-            </ul>
-
-          </div>
-        </nav>
+        </div>
+      </nav>
       <!-- </div> -->
     </div>
 
   </header>
+  <div id="login" class="login">
+    <form class="login__body">
+      <input type="text" placeholder="Nombre de usuario" required>
+      <input type="password" placeholder="Contraseña" required>
+      <div>
+        <button type="submit">Acceder</button>
+        <button id="login__close">Cancelar</button>
+      </div>
+      <a href="#">¿Olvidaste la contraseña?</a>
+    </form>
+  </div>
   <!-- END: header -->
 
 
-  <!--DESCRIPCION-------------------------------------->
+  <!--DESCRIPCION -->
 
 
   <div class="row mb50">
-        <div class="col-md-12 section-heading text-center">
-          <h2>Agradecimientos</h2>
-	  <h3>El presente recomendador desarrollado se enmarca en los proyectos SEJ-2007-67690 y P07-HUM-03049 "Desarrollo metodológico
-		  sobre la evaluación de la capacidad para usos recreativos de espacios protegidos" financiados por el Ministerio de
-		  Ciencia y Tecnología del Gobierno de España y la Consejería de Ciencia, Innovación y Empresa de la Junta de
-		  Andalucía entre los años 2008-2012.</h3>
+    <div class="col-md-12 section-heading text-center">
+      <h2>Agradecimientos</h2>
+      <h3>El presente recomendador desarrollado se enmarca en los proyectos SEJ-2007-67690 y P07-HUM-03049 "Desarrollo metodológico
+        sobre la evaluación de la capacidad para usos recreativos de espacios protegidos" financiados por el Ministerio de
+        Ciencia y Tecnología del Gobierno de España y la Consejería de Ciencia, Innovación y Empresa de la Junta de Andalucía
+        entre los años 2008-2012.</h3>
 
-	<h3>Rubén Fernández Gordillo: <a href="mailto:rubfergor@gmail.es">rubfergor@gmail.es</a>  (Programación y diseño web)</h3>
+      <h3>Rubén Fernández Gordillo:
+        <a href="mailto:rubfergor@gmail.es">rubfergor@gmail.es</a> (Programación y diseño web)</h3>
 
-	<h3>Juan Pablo Arca Jaime: <a href="mailto:pablo_mlg22@hotmail.com">pablo_mlg22@hotmail.com</a>  (Programación y diseño web)</h3>
+      <h3>Juan Pablo Arca Jaime:
+        <a href="mailto:pablo_mlg22@hotmail.com">pablo_mlg22@hotmail.com</a> (Programación y diseño web)</h3>
 
-	<h3>José Rolland: <a href="mailto:jrolland@alu.uma.es">jrolland@alu.uma.es</a>  (Programación)</h3>
+      <h3>José Rolland:
+        <a href="mailto:jrolland@alu.uma.es">jrolland@alu.uma.es</a> (Programación)</h3>
 
-	<h3>Jesús Vías Martínez: <a href="mailto:jmvias@uma.es">jmvias@uma.es</a>  (Sistema de Información Geográfica y coordinador del grupo de trabajo)</h3>
+      <h3>Jesús Vías Martínez:
+        <a href="mailto:jmvias@uma.es">jmvias@uma.es</a> (Sistema de Información Geográfica y coordinador del grupo de trabajo)</h3>
 
-	<h3>José del Campo: <a href="mailto:jcampo@lcc.uma.es">jcampo@lcc.uma.es</a>  (Director proyecto fin de carrera)</h3>
+      <h3>José del Campo:
+        <a href="mailto:jcampo@lcc.uma.es">jcampo@lcc.uma.es</a> (Director proyecto fin de carrera)</h3>
 
-	<h3>Sebastián Castillo: <a href="mailto:scastillop@uma.es">scastillop@uma.es</a>  (Servidor web)</h3>
+      <h3>Sebastián Castillo:
+        <a href="mailto:scastillop@uma.es">scastillop@uma.es</a> (Servidor web)</h3>
 
-	<h3>María Luisa Gómez: <a href="mailto:geolugom@uma.es">geolugom@uma.es</a>  (Directora proyecto investigación Consejería)</h3>
+      <h3>María Luisa Gómez:
+        <a href="mailto:geolugom@uma.es">geolugom@uma.es</a> (Directora proyecto investigación Consejería)</h3>
 
-	<h3>Carmen Ocaña: <a href="mailto:ocana@uma.es">ocana@uma.es</a>  (Directora de proyecto investigación Ministerio)</h3>
+      <h3>Carmen Ocaña:
+        <a href="mailto:ocana@uma.es">ocana@uma.es</a> (Directora de proyecto investigación Ministerio)</h3>
 
-	<h3>En el recomendador de rutas personalizadas han colaborado Alfonso Barragán (vocal del Grupo Alpino Pinsapo de la
-		Sociedad Excursionista de Málaga) y Sergio Sánchez (técnico del área de deportes del Ayuntamiento de Málaga.</h3>
-
-
-        </div>
-
-      <div class="row justify-content-md-center">
-
-             <div class="contents text-center">
-		<a href="http://analisisgeografico.uma.es/"><img src="assets/img/HUM776.png"  /></a>
-
-        </div>
-      </div>
+      <h3>En el recomendador de rutas personalizadas han colaborado Alfonso Barragán (vocal del Grupo Alpino Pinsapo de la Sociedad
+        Excursionista de Málaga) y Sergio Sánchez (técnico del área de deportes del Ayuntamiento de Málaga.</h3>
 
 
+    </div>
 
+    <div class="row justify-content-md-center">
 
+      <div class="contents text-center">
+        <a href="http://analisisgeografico.uma.es/">
+          <img src="assets/img/HUM776.png" />
+        </a>
 
-
-
-  <!-- FOOTER -->
-  <footer role="contentinfo" class="probootstrap-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="probootstrap-footer-widget">
-            <h3>Sobre nosotros</h3>
-            <p>Esta web es parte de los resultados de un proyecto desarrollado por investigadores de los departamentos de Geografía
-		  y Lenguaje y Ciencias de la Computación de la Universidad de Málaga.</p>
-            <p><a href="saberMas.html" class="link-with-icon">Saber más <i class=" icon-chevron-right"></i></a></p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="probootstrap-footer-widget">
-            <h3>Servicios</h3>
-			    <p><a href="rutasRecomendadas.html">Rutas recomendadas</a>
-				<p><a href="rutasPersonalizadas.html">Rutas personalizadas</a>
-				<p><a href="rutaMascorta.html">Ruta más corta</a>
-
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="probootstrap-footer-widget">
-            <h3>Contacto</h3>
-            <ul class="probootstrap-contact-info">
-              <li><i class="icon-location2"></i> <span>Despacho: 111 / Torre I - Facultad de Filosofía y Letras. Málaga, Málaga.</span></li>
-              <li><i class="icon-mail"></i><span>jmvias@uma.es</span></li>
-              <li><i class="icon-phone2"></i><span>952133443</span></li>
-            </ul>
-
-          </div>
-        </div>
-      </div>
-      <div class="row mt40">
-        <div class="col-md-12 text-center">
-          <ul class="probootstrap-footer-social">
-            <li><a href="https://twitter.com/geografiamalaga"><i class="icon-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/geouma"><i class="icon-facebook"></i></a></li>
-
-          </ul>
-
-
-        </div>
       </div>
     </div>
-  </footer>
-  <!-- END: footer -->
 
-  <script src="assets/js/scripts.min.js"></script>
-  <script src="assets/js/main.min.js"></script>
 
-  </body>
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer role="contentinfo" class="probootstrap-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="probootstrap-footer-widget">
+              <h3>Sobre nosotros</h3>
+              <p>Esta web es parte de los resultados de un proyecto desarrollado por investigadores de los departamentos de
+                Geografía y Lenguaje y Ciencias de la Computación de la Universidad de Málaga.</p>
+              <p>
+                <a href="saberMas.html" class="link-with-icon">Saber más
+                  <i class=" icon-chevron-right"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="probootstrap-footer-widget">
+              <h3>Servicios</h3>
+              <p>
+                <a href="rutasRecomendadas.html">Rutas recomendadas</a>
+                <p>
+                  <a href="rutasPersonalizadas.html">Rutas personalizadas</a>
+                  <p>
+                    <a href="rutaMascorta.html">Ruta más corta</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="probootstrap-footer-widget">
+              <h3>Contacto</h3>
+              <ul class="probootstrap-contact-info">
+                <li>
+                  <i class="icon-location2"></i>
+                  <span>Despacho: 111 / Torre I - Facultad de Filosofía y Letras. Málaga, Málaga.</span>
+                </li>
+                <li>
+                  <i class="icon-mail"></i>
+                  <a href="mailto:jmvias@uma.es">jmvias@uma.es</a>
+                </li>
+                <li>
+                  <i class="icon-phone2"></i>
+                  <a href="tel:+34952133443">+34952133443</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt40">
+          <div class="col-md-12 text-center">
+            <ul class="probootstrap-footer-social">
+              <li>
+                <a href="https://twitter.com/geografiamalaga">
+                  <i class="icon-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/geouma">
+                  <i class="icon-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END: footer -->
+
+    <script src="assets/js/scripts.min.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/main.min.js"></script>
+
+</body>
+
 </html>

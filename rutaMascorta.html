@@ -1,169 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title>Ruta más corta</title>
-    <link rel="shortcut icon" type="image/png" href="img/logo.png">
-    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles-merged.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link href="assets/css/map.min.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>Ruta más corta</title>
+  <link rel="shortcut icon" type="image/png" href="img/logo.png">
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles-merged.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link href="assets/css/map.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/modal.css">
+
+  <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
 
-    <!-- START: header -->
+<body>
+
+  <!-- START: header -->
   <header role="banner" class="probootstrap-header probootstrap-header-no-intro">
     <div class="container-fluid">
-      <!-- <div class="row"> -->
-        <a href="index.html" class="probootstrap-logo">Recomendador</a>
+      <a href="index.html" class="probootstrap-logo">Recomendador</a>
 
-        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
-        <div class="mobile-menu-overlay"></div>
+      <a href="#" class="probootstrap-burger-menu visible-xs">
+        <i>Menu</i>
+      </a>
+      <div class="mobile-menu-overlay"></div>
 
-       <nav role="navigation" class="probootstrap-nav hidden-xs">
-          <ul class="probootstrap-main-nav">
-            <li><a href="index.html">Principal</a></li>
+      <nav role="navigation" class="probootstrap-nav hidden-xs">
+        <ul class="probootstrap-main-nav">
+          <li>
+            <a href="rutasRecomendadas.html">Rutas recomendadas</a>
+          </li>
+          <li>
+            <a href="rutasPersonalizadas.html">Rutas personalizadas</a>
+          </li>
+          <li>
+            <a href="rutaMascorta.html">Ruta más corta</a>
+          </li>
+          <li class="probootstrap-cta">
+            <a href="#" id="login__control">Acceder</a>
+          </li>
+        </ul>
+        <div class="extra-text visible-xs">
+          <a href="#" class="probootstrap-burger-menu">
+            <i>Menu</i>
+          </a>
+          <h5>Social</h5>
+          <ul class="social-buttons">
+            <li>
+              <a href="https://twitter.com/geografiamalaga">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/geouma">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
 
-            <li><a href="rutasRecomendadas.html">Rutas recomendadas</a></li>
-			<li><a href="">Utilidades</a></li>
-            <li><a href="login.html">Inicio sesión</a></li>
-            <li class="probootstrap-cta"><a href="signup.html">Registro</a></li>
           </ul>
-          <div class="extra-text visible-xs">
-            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
-            <h5>Social</h5>
-            <ul class="social-buttons">
-              <li><a href="https://twitter.com/geografiamalaga"><i class="icon-twitter"></i></a></li>
-              <li><a href="https://www.facebook.com/geouma"><i class="icon-facebook"></i></a></li>
 
-            </ul>
-
-          </div>
-        </nav>
-      <!-- </div> -->
+        </div>
+      </nav>
     </div>
 
   </header>
-
-
-    <!-- MAPA-->
-
-<div id="map"></div>
-
-
-
-<!-- MAS CORTAS -->
- <div class="row mb50">
-        <div class="col-md-12 section-heading text-center">
-          <h2>Ruta más corta</h2>
-		   <h3>Elige el camino más corto entre dos puntos con la posibilidad de seleccionar el desnivel adecuado para tu ruta</h>
+  <div id="login" class="login">
+      <form class="login__body">
+        <input type="text" placeholder="Nombre de usuario" required>
+        <input type="password" placeholder="Contraseña" required>
+        <div>
+          <button type="submit">Acceder</button>
+          <button id="login__close">Cancelar</button>
         </div>
-      </div>
+        <a href="#">¿Olvidaste la contraseña?</a>
+      </form>
+    </div>
 
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th></th>
-	        <th>Categoría</th>
-		      <th>Nombre</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            Origen
-          </td>
-          <td>
-            <select id="path_origin__categories">
-            </select>
-          </td>
-          <td>
-            <input type="search" list="" id="path_origin__options"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Destino
-          </td>
-          <td>
-            <select id="path_destination__categories">
-            </select>
-          </td>
-          <td>
-            <input type="search" list="" id="path_destination__options"></input>
-          </td>
-        </tr>
-      </tbody>
-	  </table>
-	  <button href="#" id='path_router' class="btn btn-primary centered">Añadir ruta seleccionada al mapa</button>
+  <!-- MAPA-->
+
+  <div id="map"></div>
+  <datalist id="map__places"></datalist>
+  <div id="map__modal" class="map__modal">
+    <div class="map__modal_body">
+      <span class="map__modal_close">&times;</span>
+      <p>No pudimos encontrar una ruta...😢 ¿Probamos otros destinos?</p>
+    </div>
   </div>
-</div>
+  <div id="map__overlay" class="map__overlay">
+    <div id="map__toggle" class="map__toggle">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <menu id="map__menu" class="map__menu">
+      <li>
+        <label for="map__start">¿Desde donde sales?</label>
+        <input id="map__start" input type="search" autocomplete="on" inputmode="text" placeholder="Introduce tu origen" spellcheck="true"
+          value="" list="map__places"></input>
+      </li>
+      <li>
+        <label for="map__end">¿A donde vas?</label>
+        <input id="map__end" input type="search" autocomplete="on" inputmode="text" placeholder="Introduce tu destino" spellcheck="true"
+          value="" list="map__places"></input>
+      </li>
+      <li>
+        <button id='map__action' class="btn btn-primary">Encontrar ruta</button>
+      </li>
+    </menu>
+  </div>
 
-   <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer role="contentinfo" class="probootstrap-footer">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="probootstrap-footer-widget">
-            <h3>Acerca de nosotros</h3>
+            <h3>Sobre nosotros</h3>
             <p>Esta web es parte de los resultados de un proyecto desarrollado por investigadores de los departamentos de Geografía
-		  y Lenguaje y Ciencias de la Computación de la Universidad de Málaga.</p>
-            <p><a href="saberMas.html" class="link-with-icon">Saber más <i class=" icon-chevron-right"></i></a></p>
+              y Lenguaje y Ciencias de la Computación de la Universidad de Málaga.</p>
+            <p>
+              <a href="saberMas.html" class="link-with-icon">Saber más
+                <i class=" icon-chevron-right"></i>
+              </a>
+            </p>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="probootstrap-footer-widget">
             <h3>Servicios</h3>
-			    <p><a href="rutasRecomendadas.html">Rutas recomendadas</a>
-				<p><a href="rutasPersonalizadas.html">Rutas personalizadas</a>
-				<p><a href="rutaMascorta.html">Ruta más corta</a>
-
+            <p>
+              <a href="rutasRecomendadas.html">Rutas recomendadas</a>
+              <p>
+                <a href="rutasPersonalizadas.html">Rutas personalizadas</a>
+                <p>
+                  <a href="rutaMascorta.html">Ruta más corta</a>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="probootstrap-footer-widget">
             <h3>Contacto</h3>
             <ul class="probootstrap-contact-info">
-              <li><i class="icon-location2"></i> <span>Despacho: 111 / Torre I - Facultad de Filosofía y Letras. Málaga, Málaga.</span></li>
-              <li><i class="icon-mail"></i><span>jmvias@uma.es</span></li>
-              <li><i class="icon-phone2"></i><span>952133443</span></li>
+              <li>
+                <i class="icon-location2"></i>
+                <span>Despacho: 111 / Torre I - Facultad de Filosofía y Letras. Málaga, Málaga.</span>
+              </li>
+              <li>
+                <i class="icon-mail"></i>
+                <a href="mailto:jmvias@uma.es">jmvias@uma.es</a>
+              </li>
+              <li>
+                <i class="icon-phone2"></i>
+                <a href="tel:+34952133443">+34952133443</a>
+              </li>
             </ul>
-
           </div>
         </div>
       </div>
+
       <div class="row mt40">
         <div class="col-md-12 text-center">
           <ul class="probootstrap-footer-social">
-            <li><a href="https://twitter.com/geografiamalaga"><i class="icon-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/geouma"><i class="icon-facebook"></i></a></li>
-
+            <li>
+              <a href="https://twitter.com/geografiamalaga">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/geouma">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
           </ul>
-
-
         </div>
       </div>
     </div>
   </footer>
   <!-- END: footer -->
-
-
-
-  <!-- <script src="assets/js/scripts.min.js"></script>
-  <script src="assets/js/main.min.js"></script> -->
   <script src="assets/js/short_app.min.js"></script>
+  <script src="assets/js/scripts.min.js"></script>
+  <script src="assets/js/login.js"></script>
+  <script src="assets/js/main.min.js"></script>
 
-  </body>
+</body>
+
 </html>

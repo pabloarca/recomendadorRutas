@@ -70,7 +70,9 @@ a:active,a:focus,a:hover{
     filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=$firstcolor, endColorstr=$secondcolor, GradientType=1 )
 }
 .probootstrap-header.probootstrap-header-no-intro{
-    padding-bottom:30px
+    padding-bottom:1rem;
+    padding-top: 1rem;
+    max-height: 10vh;
 }
 .probootstrap-feature-first{
     position:relative;

@@ -1,69 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recomendador de rutas</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles-merged.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
 
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recomendador de rutas</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles-merged.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
+
+  <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
 
+<body>
 
+  <div id="login" class="login">
+    <form class="login__body">
+      <input type="text" placeholder="Nombre de usuario" required>
+      <input type="password" placeholder="Contraseña" required>
+      <div>
+        <button type="submit">Acceder</button>
+        <button id="login__close">Cancelar</button>
+      </div>
+      <a href="#">¿Olvidaste la contraseña?</a>
+    </form>
+  </div>
 
   <!-- START: header -->
   <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
       <!-- <div class="row"> -->
-        <a href="index.html" class="probootstrap-logo">Recomendador</a>
+      <a href="index.html" class="probootstrap-logo">Recomendador</a>
 
-        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
-        <div class="mobile-menu-overlay"></div>
+      <a href="#" class="probootstrap-burger-menu visible-xs">
+        <i>Menu</i>
+      </a>
+      <div class="mobile-menu-overlay"></div>
 
-        <nav role="navigation" class="probootstrap-nav hidden-xs">
-          <ul class="probootstrap-main-nav">
-            <li><a href="index.html">Principal</a></li>
+      <nav role="navigation" class="probootstrap-nav hidden-xs">
+        <ul class="probootstrap-main-nav">
+          <li>
+            <a href="rutasRecomendadas.html">Rutas recomendadas</a>
+          </li>
+          <li>
+            <a href="rutasPersonalizadas.html">Rutas personalizadas</a>
+          </li>
+          <li>
+            <a href="rutaMascorta.html">Ruta más corta</a>
+          </li>
+          <li class="probootstrap-cta">
+            <a id="login__control" href="#">Acceder</a>
+          </li>
+        </ul>
+        <div class="extra-text visible-xs">
+          <a href="#" class="probootstrap-burger-menu">
+            <i>Menu</i>
+          </a>
+          <h5>Social</h5>
+          <ul class="social-buttons">
+            <li>
+              <a href="https://twitter.com/geografiamalaga">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/geouma">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
 
-            <li><a href="rutasRecomendadas.html">Rutas recomendadas</a></li>
-			<li><a href="">Utilidades</a></li>
-            <li><a href="login.html">Inicio sesión</a></li>
-            <li class="probootstrap-cta"><a href="signup.html">Registro</a></li>
           </ul>
-          <div class="extra-text visible-xs">
-            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
-            <h5>Social</h5>
-            <ul class="social-buttons">
-              <li><a href="https://twitter.com/geografiamalaga"><i class="icon-twitter"></i></a></li>
-              <li><a href="https://www.facebook.com/geouma"><i class="icon-facebook"></i></a></li>
 
-            </ul>
+        </div>
+      </nav>
 
-          </div>
-        </nav>
-
-        <section class="probootstrap-intro">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <h1 class="probootstrap-animate">Sierra de las Nieves</h1>
-                <div class="probootstrap-subtitle probootstrap-animate">
-                  <h2>Visualiza las mejores rutas senderistas en Sierra de las Nieves</h2>
-                </div>
-
+      <section class="probootstrap-intro">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1 class="probootstrap-animate">Sierra de las Nieves</h1>
+              <div class="probootstrap-subtitle probootstrap-animate">
+                <h2>Visualiza las mejores rutas senderistas en Sierra de las Nieves</h2>
               </div>
+
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       <!-- </div> -->
     </div>
@@ -79,23 +110,29 @@
 
         <div class="col-md-4 probootstrap-animate ">
           <div class="probootstrap-box">
-               <img src="assets/img/cabra.png"  alt="" class="img-responsive center-block"/>
-              <h3><a href="rutasRecomendadas.html">Rutas recomendadas</a></h3>
-              <p>Visualiza en el mapa las rutas recomendadas por nuestro equipo.</p>
+            <img src="assets/img/cabra.png" alt="" class="img-responsive center-block" />
+            <h3>
+              <a href="rutasRecomendadas.html">Rutas recomendadas</a>
+            </h3>
+            <p>Visualiza en el mapa las rutas recomendadas por nuestro equipo.</p>
           </div>
         </div>
         <div class="col-md-4 probootstrap-animate">
           <div class="probootstrap-box">
-              <img src="assets/img/botas.png"  alt="" class="img-responsive center-block"/>
-              <h3><a href="rutasPersonalizadas.html">Rutas personalizadas</a></h3>
-              <p>Descubre la ruta que más se adapte al perfil que tengas.</p>
+            <img src="assets/img/botas.png" alt="" class="img-responsive center-block" />
+            <h3>
+              <a href="rutasPersonalizadas.html">Rutas personalizadas</a>
+            </h3>
+            <p>Descubre la ruta que más se adapte al perfil que tengas.</p>
           </div>
         </div>
         <div class="col-md-4 probootstrap-animate">
           <div class="probootstrap-box">
-              <img src="assets/img/camino.png"  alt="" class="img-responsive center-block"/>
-              <h3><a href="rutaMascorta.html">Ruta más corta</a></h3>
-              <p>¿Desde el punto A a B? ¡Te lo ponemos fácil!.</p>
+            <img src="assets/img/camino.png" alt="" class="img-responsive center-block" />
+            <h3>
+              <a href="rutaMascorta.html">Ruta más corta</a>
+            </h3>
+            <p>¿Desde el punto A a B? ¡Te lo ponemos fácil!.</p>
           </div>
         </div>
       </div>
@@ -103,8 +140,6 @@
     </div>
   </section>
   <!-- END: section -->
-
-
 
   <!-- START: section -->
   <section class="probootstrap-section probootstrap-section-extra">
@@ -120,21 +155,15 @@
         <div class="col-lg-5 col-md-5 section-heading probootstrap-animate">
           <h2>Personaliza tus rutas en Sierra de las Nieves</h2>
           <p>El paraje natural de Sierra de las Nieves ofrece numerosas posibilidades a todo aquel que quiera acercarse al lugar
-		y realizar una ruta senderista.</p>
+            y realizar una ruta senderista.</p>
           <p> Esta web pretende facilitarte la planificación ofreciéndote rutas según tu perfil físico, la motivación de la ruta,
-		  el tiempo del que dispones o por ejemplo si quieres cruzar por una zona de gran valor ecológico, o si prefieres una
-		  ruta más difícil para hacer deporte.</p>
+            el tiempo del que dispones o por ejemplo si quieres cruzar por una zona de gran valor ecológico, o si prefieres
+            una ruta más difícil para hacer deporte.</p>
         </div>
       </div>
     </div>
   </section>
   <!-- END: section -->
-
-
-
-
-
-
 
   <!-- FOOTER -->
   <footer role="contentinfo" class="probootstrap-footer">
@@ -142,51 +171,73 @@
       <div class="row">
         <div class="col-md-4">
           <div class="probootstrap-footer-widget">
-            <h3>Acerca de nosotros</h3>
+            <h3>Sobre nosotros</h3>
             <p>Esta web es parte de los resultados de un proyecto desarrollado por investigadores de los departamentos de Geografía
-		  y Lenguaje y Ciencias de la Computación de la Universidad de Málaga.</p>
-            <p><a href="saberMas.html" class="link-with-icon">Saber más <i class=" icon-chevron-right"></i></a></p>
+              y Lenguaje y Ciencias de la Computación de la Universidad de Málaga.</p>
+            <p>
+              <a href="saberMas.html" class="link-with-icon">Saber más
+                <i class=" icon-chevron-right"></i>
+              </a>
+            </p>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="probootstrap-footer-widget">
             <h3>Servicios</h3>
-			    <p><a href="rutasRecomendadas.html">Rutas recomendadas</a>
-				<p><a href="rutasPersonalizadas.html">Rutas personalizadas</a>
-				<p><a href="rutaMascorta.html">Ruta más corta</a>
-
+            <p>
+              <a href="rutasRecomendadas.html">Rutas recomendadas</a>
+              <p>
+                <a href="rutasPersonalizadas.html">Rutas personalizadas</a>
+                <p>
+                  <a href="rutaMascorta.html">Ruta más corta</a>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="probootstrap-footer-widget">
             <h3>Contacto</h3>
             <ul class="probootstrap-contact-info">
-              <li><i class="icon-location2"></i> <span>Despacho: 111 / Torre I - Facultad de Filosofía y Letras. Málaga, Málaga.</span></li>
-              <li><i class="icon-mail"></i><span>jmvias@uma.es</span></li>
-              <li><i class="icon-phone2"></i><span>952133443</span></li>
+              <li>
+                <i class="icon-location2"></i>
+                <span>Despacho: 111 / Torre I - Facultad de Filosofía y Letras. Málaga, Málaga.</span>
+              </li>
+              <li>
+                <i class="icon-mail"></i>
+                <a href="mailto:jmvias@uma.es">jmvias@uma.es</a>
+              </li>
+              <li>
+                <i class="icon-phone2"></i>
+                <a href="tel:+34952133443">+34952133443</a>
+              </li>
             </ul>
-
           </div>
         </div>
       </div>
+
       <div class="row mt40">
         <div class="col-md-12 text-center">
           <ul class="probootstrap-footer-social">
-            <li><a href="https://twitter.com/geografiamalaga"><i class="icon-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/geouma"><i class="icon-facebook"></i></a></li>
-
+            <li>
+              <a href="https://twitter.com/geografiamalaga">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/geouma">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
           </ul>
-
-
         </div>
       </div>
     </div>
   </footer>
   <!-- END: footer -->
 
-
-
   <script src="assets/js/scripts.min.js"></script>
+  <script src="assets/js/login.js"></script>
   <script src="assets/js/main.min.js"></script>
-  </body>
+</body>
+
 </html>

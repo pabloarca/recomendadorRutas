@@ -1,5 +1,130 @@
 #map {
-  margin: 4px auto 4px auto;
-   width:90%;
-   height: 600px;
+  width:100%;
+  height: 90vh;
  }
+.map__modal {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  position: fixed;
+  overflow: auto;
+  visibility: collapse;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: all 0.5s ease-in-out
+}
+
+.map__modal.map__modal--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.map__modal_body {
+    background-color: white;
+    border-radius: 5%;
+    border: 1px solid grey;
+    padding: 24px;
+    text-align: center;
+    margin: 20% auto;
+    max-width: 66%;
+}
+
+.map__modal_body p {
+    margin: 0;
+}
+
+.map__modal_close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: grey;
+}
+
+.map__modal_close:hover,
+.map__modal_close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.map__overlay {
+  display: inline-block;
+  position: absolute;
+  max-width: 270px;
+  max-height: 100%;
+  overflow: hidden;
+  top: 10vh;
+  padding: 10px;
+  z-index: 1;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+.map__overlay select,input {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.map__overlay button {
+    display: block;
+    margin-top: 8px;
+}
+
+.map__overlay.map__overlay--expanded {
+    background-color: rgba(255,255,255,0.25);
+    box-shadow:0 0 1.5px rgba(0, 0, 0, 0.25);
+}
+
+.map__menu {
+  opacity: 0;
+  visibility: collapse;
+  list-style-type: none;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.map__menu.map__menu--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.map__toggle {
+    width: 30px;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    margin: 6px 0;
+    transition: 0.7s;
+}
+
+/* Rotate first bar */
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.open .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+output {
+    display: inline-block;
+    font-size: 16px;
+}
