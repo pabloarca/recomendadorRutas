@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recomendador de rutas</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles-merged.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <link rel="stylesheet" href="assets/css/acceder.css">
+
+  <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5shiv.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+      <![endif]-->
+      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDovCFV9F1BPCmjwCWGHbrQRL93gBVColY",
+          authDomain: "recomendador-792e5.firebaseapp.com",
+          databaseURL: "https://recomendador-792e5.firebaseio.com",
+          projectId: "recomendador-792e5",
+          storageBucket: "recomendador-792e5.appspot.com",
+          messagingSenderId: "858718065967"
+        };
+        firebase.initializeApp(config);
+      </script>
+
+
+</head>
+
+<body>
+
+  <!-- START: header -->
+  <header role="banner" class="probootstrap-header probootstrap-header-no-intro">
+    <div class="container-fluid">
+      <!-- <div class="row"> -->
+      <a href="index.html" class="probootstrap-logo">Recomendador</a>
+
+      <a href="#" class="probootstrap-burger-menu visible-xs">
+        <i>Menu</i>
+      </a>
+      <div class="mobile-menu-overlay"></div>
+
+      <nav role="navigation" class="probootstrap-nav hidden-xs">
+        <ul class="probootstrap-main-nav">
+          <li>
+            <a href="index.html">Principal</a>
+          </li>
+
+          <li>
+            <a href="rutasRecomendadas.html">Rutas recomendadas</a>
+          </li>
+          <li>
+            <a href="">Utilidades</a>
+          </li>
+
+
+        </ul>
+        <div class="extra-text visible-xs">
+          <a href="#" class="probootstrap-burger-menu">
+            <i>Menu</i>
+          </a>
+          <h5>Social</h5>
+          <ul class="social-buttons">
+            <li>
+              <a href="https://twitter.com/geografiamalaga">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/geouma">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </nav>
+      <!-- </div> -->
+    </div>
+
+  </header>
+
+  <!-- END: header -->
+
+
+
+  <h1 style="text-align:center; padding-top:50px">Regístrate para obtener una ruta personalizada acorde a tu estado físico</h1>
+
+
+<!-- SOLICITUD -->
+
+    <div class="container">
+
+      <div class="card">
+    <form class="text-center"  action="" method="POST" style="padding-left:50px;padding-top:50px;padding-right:50px">
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input id="name" class="form-control" name="name" requiered>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input id="email" class="form-control" type="email" requiered>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Contraseña</label>
+        <div class="col-sm-10">
+          <input id="password" class="form-control" type="password" requiered>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">Apellidos</label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" name="name" requiered>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">Fecha nacimiento</label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" name="name" requiered>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">Pulsaciones por minuto en reposo</label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" name="pulsaciones" requiered>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">Peso</label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" name="peso" requiered>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">Altura</label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" name="altura" requiered>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">Entrenamiento</label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" name="name" requiered>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+        <button onclick="registrar()">Registrarse</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+<!-- FOOTER -->
+<footer role="contentinfo" class="probootstrap-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="probootstrap-footer-widget">
+          <h3>Sobre nosotros</h3>
+          <p>Esta web es parte de los resultados de un proyecto desarrollado por investigadores de los departamentos de
+            Geografía y Lenguaje y Ciencias de la Computación de la Universidad de Málaga.</p>
+          <p>
+            <a href="saberMas.html" class="link-with-icon">Saber más
+              <i class=" icon-chevron-right"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="probootstrap-footer-widget">
+          <h3>Servicios</h3>
+          <p>
+            <a href="rutasRecomendadas.html">Rutas recomendadas</a>
+            <p>
+              <a href="rutasPersonalizadas.html">Rutas personalizadas</a>
+              <p>
+                <a href="rutaMascorta.html">Ruta más corta</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="probootstrap-footer-widget">
+          <h3>Contacto</h3>
+          <ul class="probootstrap-contact-info">
+            <li>
+              <i class="icon-location2"></i>
+              <span>Despacho: 111 / Torre I - Facultad de Filosofía y Letras. Málaga, Málaga.</span>
+            </li>
+            <li>
+              <i class="icon-mail"></i>
+              <a href="mailto:jmvias@uma.es">jmvias@uma.es</a>
+            </li>
+            <li>
+              <i class="icon-phone2"></i>
+              <a href="tel:+34952133443">+34952133443</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt40">
+      <div class="col-md-12 text-center">
+        <ul class="probootstrap-footer-social">
+          <li>
+            <a href="https://twitter.com/geografiamalaga">
+              <i class="icon-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/geouma">
+              <i class="icon-facebook"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END: footer -->
+
+
+  </script>
+  <script src="assets/js/scripts.min.js"></script>
+  <script src="assets/js/login.js"></script>
+
+  <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>
