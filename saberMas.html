@@ -7,15 +7,15 @@
   <title>Recomendador de rutas</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
 
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles-merged.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="stylesheet" href="assets/css/modal.css">
+
   <link href="assets/css/timeline.css" rel="stylesheet" type="text/css">
 
   <!--[if lt IE 9]>
@@ -29,10 +29,10 @@
 
 
   <!-- START: header -->
-  <header role="banner" class="probootstrap-header probootstrap-header-no-intro">
+  <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
       <!-- <div class="row"> -->
-      <a href="index.html" class="probootstrap-logo">Recomendador</a>
+      <a href="index.html" class="probootstrap-logo" style="font-size:13px!important">Sierra de las Nieves</a>
 
       <a href="#" class="probootstrap-burger-menu visible-xs">
         <i>Menu</i>
@@ -40,23 +40,54 @@
       <div class="mobile-menu-overlay"></div>
 
       <nav role="navigation" class="probootstrap-nav hidden-xs">
-        <ul class="probootstrap-main-nav">
+        <ul class="probootstrap-main-nav navbar-right">
           <li>
             <a href="index.html">Principal</a>
-          </li>
-
-          <li>
-            <a href="rutasRecomendadas.html">Rutas recomendadas</a>
           </li>
           <li>
             <a href="">Utilidades</a>
           </li>
           <li>
-            <a href="login.html" id="login__control">Inicio sesión</a>
+            <a href="saberMas.html">Contacto</a>
           </li>
-          <li class="probootstrap-cta">
-            <a href="signup.html">Registro</a>
-          </li>
+
+          <li><a href="registro.html">Regístrate</a></li>
+                  <li class="dropdown">
+                     <a href="" class="dropdown-toggle" data-toggle="dropdown">Accede <b class="caret"></b></a>
+                     <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+                        <li>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" >
+                                    <div class="form-group">
+                                       <label class="sr-only">Email</label>
+                                       <input type="email" class="form-control" id="email2" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="sr-only">Contraseña</label>
+                                       <input type="contrasena" class="form-control" id="contrasena" placeholder="Contraseña" required>
+                                    </div>
+                                    <div class="checkbox">
+                                       <label>
+                                       <input type="checkbox"> Recordarme
+                                       </label>
+                                    </div>
+                                    <div class="form-group">
+                                       <button onclick="ingreso()">Acceso</button>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                           <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Google">
+                           <input class="btn btn-primary btn-block" type="button" id="sign-in-facebook" value="Sign In with Facebook">
+                        </li>
+                     </ul>
+                  </li>
+                </li>
+
         </ul>
         <div class="extra-text visible-xs">
           <a href="#" class="probootstrap-burger-menu">
@@ -79,65 +110,12 @@
 
         </div>
       </nav>
-      <!-- </div> -->
-    </div>
-
-  </header>
-
+</header>
   <!-- END: header -->
 
-  <!-- TIMELINE -->
 
 
-  <section class="timeline" style="padding:0px;">
-    <ul>
-      <li>
-        <div>
-          <time style="color:#fff">2008</time><p  style="color:#fff">Inicio de trabajos de investigación en el marco de los proyectos de investigación del Gobierno de España y de la Junta de Andalucía
-            (SEJ-2007-67690 y P07-HUM-03049) sobre “Desarrollo metodológico sobre la evaluación de la capacidad para usos recreativos de espacios protegidos” dirigidos por las profesoras Carmen Ocaña
-             Ocaña y María Luisa Gómez Moreno del grupo HUM776 (Análisis Geográfico ) de la Universidad de Málaga.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <time style="color:#fff">2011</time><p  style="color:#fff">Proyecto Fin de Carrera de José Rolland titulado “Servidor de mapas para publicación de rutas senderistas e interfaz web cliente”
-            y dirigido por Jesús Vías Martínez, José del Campo y Sebastián Castillo.</p>
-      </li>
-      <li>
-        <div>
-          <time style="color:#fff">2012</time><p  style="color:#fff">Registro de la propiedad intelectual del Sistema Recomendador de rutas de senderismo a nombre de Jesús Vías Martínez, José del Campo,
-             Sebastián Castillo, Carmen Ocaña y María Luisa Gómez y José Rolland.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <time style="color:#fff">2014</time><p  style="color:#fff">Publicación en el Boletín de la Asociación de Geógrafos Españoles del artículo titulado “Multicriteria evaluation by GIS to
-             determine trail hiking suitability in a natural park” por Jesús Vías y Carmen Ocaña.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <time style="color:#fff">2014</time><p  style="color:#fff">Publicación en el XVI Congreso Nacional de Tecnologías de la Información Geográfica celebrado en Alicante de la comunicación titulada
-            “Creación de rutas senderistas mediante análisis de redes y algoritmo multicriterio: Aplicación en el parque natural Sierra de las Nieves” por Jesús Vías, José Rolland, Sebastián Castillo, José del Campo y Ana Luque.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <time style="color:#fff">2018</time><p  style="color:#fff">Publicación en la revista Journal of Geographical System del artículo titulado “Recommendation system to determine suitable and viable hiking routes: a
-            prototype application in Sierra de las Nieves Nature Reserve (southern Spain)” por Jesús Vías, José Rolland, María Luisa Gómez, Carmen Ocaña y Ana Luque.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <time style="color:#fff">2018</time><p  style="color:#fff">Actualización del Sistema Recomendador de rutas de senderismo en el marco de “Cátedra Estratégica de Recursos Geotecnológicos
-            para la Economía y la Sociedad“ financiada por el Ayuntamiento de Málaga y dirigida por el profesor de la UMA Benjamín Galacho. Los trabajos de actualización son realizados Ruben Fernández y Pablo Arca bajo la dirección de Jesús Vías.</p>
-        </div>
-      </li>
 
-
-    </ul>
-  </section>
-  <!--DESCRIPCION -->
 
 
   <div class="row mb50">
@@ -179,6 +157,70 @@
 
       </div>
     </div>
+
+<br>
+
+
+<!---TIMELINE--->
+
+  <section class="section intro">
+  <div class="container">
+    <h1>Roadmap 👏 </h1>
+  </div>
+</section>
+<br>
+
+<section class="timeline">
+  <ol>
+    <li>
+      <div>
+        <time>2008</time>Inicio de trabajos en el marco de los proyectos de investigación del Gobierno de España y de la Junta de Andalucía sobre “Desarrollo metodológico sobre la evaluación de la capacidad para usos recreativos de espacios protegidos” dirigidos por las profesoras Carmen Ocaña O. y María Luisa G. Moreno del grupo HUM776 de la Universidad de Málaga.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2011</time>Proyecto Fin de Carrera de José Rolland titulado “Servidor de mapas para publicación de rutas senderistas e interfaz web cliente” y dirigido por Jesús Vías Martínez, José del Campo y Sebastián Castillo.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2012</time> Registro de la propiedad intelectual del Sistema Recomendador de rutas de senderismo a nombre de Jesús Vías Martínez, José del Campo, Sebastián Castillo, Carmen Ocaña y María Luisa Gómez y José Rolland.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2014</time> Publicación en el Boletín de la Asociación de Geógrafos Españoles del artículo titulado “Multicriteria evaluation by GIS to determine trail hiking suitability in a natural park” por Jesús Vías y Carmen Ocaña.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2014</time> Publicación en el XVI Congreso Nacional de Tecnologías de la Información Geográfica celebrado en Alicante de la comunicación titulada “Creación de rutas senderistas mediante análisis de redes y algoritmo multicriterio: Aplicación en el parque natural Sierra de las Nieves” por Jesús Vías, José Rolland, Sebastián Castillo, José del Campo y Ana Luque.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2018</time> Publicación en la revista Journal of Geographical System del artículo titulado “Recommendation system to determine suitable and viable hiking routes: a prototype application in Sierra de las Nieves Nature Reserve (southern Spain)” por Jesús Vías, José Rolland, María Luisa Gómez, Carmen Ocaña y Ana Luque.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2018</time> Actualización del Sistema Recomendador de rutas  en el marco de “Cátedra Estratégica de Recursos Geotecnológicos para la Economía y la Sociedad“ financiada por el Ayunt. de Málaga y dirigida por el profesor de la UMA Benjamín Galacho. Los trabajos de actualización son realizados Ruben Fernández y Pablo Arca bajo la dirección de Jesús Vías.
+      </div>
+    </li>
+    <li>
+
+    <li></li>
+  </ol>
+<br>
+  <div class="arrows">
+    <button class="arrow arrow__prev disabled" disabled>
+      <img src="assets/img/arrow_prev.svg" alt="prev timeline arrow">
+    </button>
+    <button class="arrow arrow__next">
+      <img src="assets/img/arrow_next.svg" alt="next timeline arrow">
+    </button>
+  </div>
+</section>
 
 
 
